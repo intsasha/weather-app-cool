@@ -1,0 +1,73 @@
+body {
+  font-family: "Merriweather Sans", sans-serif;
+  font-family: "Oswald", sans-serif;
+  font-family: "Poppins", sans-serif;
+  border: 30px solid #ffa8e2;
+}
+.enter-city {
+  color: black;
+  border: 2px solid #f367c4;
+  border-radius: 25px;
+  font-size: 20px;
+  margin: 0 auto;
+  line-height: 22px;
+  padding: 16px 25px;
+  box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+  margin-top: 40px;
+  padding-right: 120px;
+}
+.srch-button {
+  color: white;
+  background-color: #f367c4;
+  border: 2px solid;
+  border-radius: 25px;
+  font-size: 20px;
+  line-height: 22px;
+  padding: 16px 24px;
+  transition: all 200ms ease;
+  box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+  margin-top: 40px;
+}
+.current-button {
+  color: white;
+  background-color: #f367c4;
+  border: 2px solid;
+  border-radius: 25px;
+  font-size: 20px;
+  line-height: 22px;
+  padding: 16px 24px;
+  transition: all 200ms ease;
+  box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+  margin-top: 40px;
+}
+button:hover {
+  cursor: pointer;
+  background: #ffa8e2;
+}
+.header {
+  font-size: 45px;
+  margin-top: 30px;
+}
+.unit {
+  font-size: 30px;
+}
+.sub-header {
+  font-size: 30px;
+}
+.main-emoji {
+  font-size: 200px;
+  color: #f367c4;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+p {
+  font-size: 25px;
+  font-weight: 500;
+}
+.week-emoji {
+  color: #f367c4;
+  font-size: 30px;
+}
+.details {
+  font-size: 25px;
+}
