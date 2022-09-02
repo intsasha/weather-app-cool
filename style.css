@@ -70,3 +70,14 @@ p {
   font-size: 15px;
   text-align: center;
 }
+#fahrenheit-link {
+  text-decoration: none;
+}
+.active {
+  color: black;
+  cursor: default;
+  text-decoration: none;
+}
+.active.hover {
+  text-decoration: none;
+}
