@@ -82,24 +82,6 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
-function convertToFahrenheit(event) {
-  event.preventDefault();
-  let temperatureValue = document.querySelector("#temperature");
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
-  temperatureValue.innerHTML = Math.round(fahrenheitTemp);
-}
-let celsiusTemp = null;
-
-function convertToCelsius(event) {
-  event.preventDefault();
-  let temperatureValue = document.querySelector("#temperature");
-  fahrenheitLink.classList.remove("active");
-  celsiusLink.classList.add("active");
-  temperatureValue.innerHTML = Math.round(celsiusTemp);
-}
-
 function displayForecast(response) {
   let forecast = response.data.daily;
 
@@ -122,10 +104,10 @@ function displayForecast(response) {
                 <div class="weather-forecast-temperatures">
                   <span class="weather-forecast-temperature-max">${Math.round(
                     forecastDay.temp.max
-                  )}</span>
+                  )}° </span>
                   <span class="weather-forecast-temperature-min">${Math.round(
                     forecastDay.temp.min
-                  )}</span>
+                  )}° </span>
                 </div>
         </div>`;
     }
@@ -133,12 +115,6 @@ function displayForecast(response) {
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", convertToFahrenheit);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", convertToCelsius);
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
