@@ -22,7 +22,7 @@ let days = [
 ];
 let day = days[now.getDay()];
 
-time.innerHTML = `${day} ${hours}:${minutes}`;
+time.innerHTML = `Last updated ${day} ${hours}:${minutes}`;
 
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
