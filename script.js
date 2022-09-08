@@ -41,7 +41,17 @@ function showWeather(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
   celsiusTemp = response.data.main.temp;
+
+  getForecast(response.data.coord);
 }
+
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "8aac14506cda87b1b4aa94b88cbdd374";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&unitsmetric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
 function searchCity(city) {
   let apiKey = "8aac14506cda87b1b4aa94b88cbdd374";
   let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -120,5 +130,3 @@ let currentLocationButton = document.querySelector("#current-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
 let iconElement = document.querySelector("#icon");
-
-displayForecast();
